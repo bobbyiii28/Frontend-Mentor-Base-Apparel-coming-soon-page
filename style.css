@@ -1,0 +1,227 @@
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(150.03deg, #ffffff 0%, #fff4f4 84.51%);
+}
+
+.visually-hidden {
+  position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* typography */
+
+main {
+  text-align: center;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 42px;
+  letter-spacing: 10.8254px;
+  color: #423a3a;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+
+.highlight {
+  color: #ce9898;
+  font-weight: 300;
+  line-height: 42px;
+  letter-spacing: 10.8254px;
+}
+
+p {
+  color: #ce9898;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ce9898;
+  opacity: 0.5; /* Firefox */
+  padding-left: 1.5rem;
+  padding-right: 8.25rem;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #ce9898;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #ce9898;
+}
+
+.error-message {
+  padding-top: 0;
+  margin-top: 0;
+  display: none;
+  color: red;
+}
+
+.image-error {
+  display: none;
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+  margin-top: 0.8125rem;
+  margin-right: 0.5rem;
+}
+
+/* mobile layout */
+
+.desktop-hero {
+  display: none;
+}
+
+.desktop-logo {
+  display: none;
+}
+
+header img {
+  margin: 1.9375rem 15.1875rem 2.0069rem 2rem;
+}
+
+.hero img {
+  width: 100%;
+  max-height: 15.625rem;
+  object-fit: cover;
+}
+
+.main-content {
+  margin: 4rem 2rem 5.75rem 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: linear-gradient(150.03deg, #ffffff 0%, #fff4f4 84.51%);
+  border-radius: 1.75rem;
+  border: 1px solid #ce9898;
+  color: #ce9898;
+  /* margin: 2rem 2rem 5.75rem 2rem; */
+}
+
+button {
+  background: linear-gradient(135deg, #f8bfbf 0%, #ee8b8b 100%);
+  box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+  border-radius: 1.75rem;
+  border: 0px solid #ce9898;
+  max-width: 4rem;
+  max-height: 3rem;
+  padding: 0.9375rem 1.75rem 0.9375rem 1.75rem;
+}
+
+.btn-arrow {
+  display: inline-block;
+  max-width: 0.5525rem;
+  max-height: 1.1044rem;
+}
+
+input {
+  background: linear-gradient(150.03deg, #ffffff 0%, #fff4f4 84.51%);
+  border-radius: 1.75rem;
+  color: #ce9898;
+  border: none;
+  flex-grow: 2;
+}
+
+/* desktop-layout */
+
+@media (min-width: 750px) {
+  .mobile-logo {
+    display: none;
+  }
+  .mobile-hero {
+    display: none;
+  }
+
+  .desktop-hero {
+    display: block;
+    min-height: 100vh;
+    object-fit: cover;
+  }
+
+  .hero {
+    width: 50%;
+    min-height: 100vh;
+  }
+
+  main {
+    width: 50%;
+    padding-left: 2.5781rem;
+    text-align: left;
+  }
+
+  .desktop-logo {
+    display: block;
+    margin-bottom: 8.5056rem;
+    max-width: 9.875rem;
+    max-height: 2.0625rem;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .main-content {
+    max-width: 27.8125rem;
+    max-height: 25.25rem;
+  }
+
+  /* typography desktop layout */
+
+  h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    letter-spacing: 17.3206px;
+  }
+
+  .title {
+    text-align: left;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
